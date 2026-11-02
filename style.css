@@ -45,7 +45,7 @@
     .welcome-yes { position: relative; z-index: 1; }
     .welcome-no { position: absolute; top: 50%; left: 72%; border: 1px solid var(--line); border-radius: 999px; padding: 10px 20px; background: var(--white); color: var(--muted); cursor: pointer; transform: translate(-50%, -50%); transition: left .14s ease, top .14s ease; }
 
-    /* THANH ĐIỀU HƯỚNG: logo, các liên kết và nút mở kỷ niệm. */
+    /* THANH ĐIỀU HƯỚNG: logo và các liên kết tới từng phần. */
     .topbar {
       position: sticky;
       z-index: 10;
@@ -61,35 +61,23 @@
       justify-content: space-between;
       gap: 20px;
     }
-    .brand { font-family: var(--serif); font-size: 20px; font-style: italic; white-space: nowrap; }
+    .brand { font-family: var(--serif); font-size: 22px; font-style: italic; white-space: nowrap; }
     .brand span { color: var(--rose); }
-    .nav-links { display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 13px; }
+    .nav-links { display: flex; align-items: center; gap: 7px; color: var(--muted); font-size: 12px; }
     .nav-links a {
       display: inline-flex;
+      flex: 0 0 auto;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
       border: 1px solid var(--rose);
       border-radius: 999px;
-      padding: 8px 15px;
+      padding: 7px 10px;
       color: var(--rose-dark);
+      white-space: nowrap;
       transition: background .2s, color .2s;
     }
     .nav-links a:hover, .nav-links a:focus-visible { background: var(--rose); color: white; }
     .nav-icon { width: 15px; height: 15px; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.7; }
-    .nav-cta {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      border: 1px solid var(--rose);
-      border-radius: 999px;
-      padding: 8px 15px;
-      background: transparent;
-      color: var(--rose-dark);
-      font-size: 13px;
-      transition: background .2s, color .2s;
-    }
-    .nav-cta:hover { background: var(--rose); color: white; }
 
     /* TRANG CHỦ: bố cục giới thiệu, hình lớn và lời nhắn trên ảnh. */
     .hero {
@@ -606,7 +594,8 @@
     @media (min-width: 761px) and (max-width: 1280px) {
       html { scroll-padding-top: 145px; }
       .nav { flex-wrap: wrap; gap: 12px; padding-block: 12px; }
-      .nav-links { order: 3; width: 100%; justify-content: center; flex-wrap: wrap; }
+      .nav-links { order: 3; width: 100%; justify-content: center; flex-wrap: nowrap; gap: clamp(4px, 1vw, 8px); }
+      .nav-links a { padding-inline: clamp(6px, 1vw, 10px); font-size: 11px; }
     }
     /* GIAO DIỆN ĐIỆN THOẠI: điều chỉnh điều hướng và bố cục các phần ở màn hình hẹp. */
     @media (max-width: 760px) {
@@ -614,10 +603,8 @@
       .nav { min-height: 62px; }
       .nav-links { position: fixed; right: 0; bottom: 0; left: 0; justify-content: space-around; gap: 4px; border-top: 1px solid var(--line); padding: 10px 8px calc(10px + env(safe-area-inset-bottom)); background: rgb(251 245 239 / 97%); font-size: 10px; }
       .nav-links { overflow-x: auto; justify-content: flex-start; }
-      .nav-links a { flex: 1 0 auto; min-width: 44px; flex-direction: column; gap: 2px; border: 0; padding: 4px; white-space: nowrap; }
+      .nav-links a { flex: 0 0 auto; min-width: 44px; flex-direction: column; gap: 2px; border: 0; padding: 4px; white-space: nowrap; }
       .nav-links .nav-icon { width: 17px; height: 17px; }
-      .nav-cta { gap: 5px; padding: 7px 12px; font-size: 11px; }
-      .nav-cta .nav-icon { width: 14px; height: 14px; }
       .hero { min-height: calc(100svh - 62px); gap: 12px; padding: 20px 0 14px; }
       .hero-grid { grid-template-columns: 1fr; gap: 14px; }
       .hero h1 { margin: 12px 0 10px; font-size: clamp(38px, 10vw, 52px); }
