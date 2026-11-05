@@ -1,0 +1,130 @@
+/* Keep the original rose palette; all other palettes share the same color roles. */
+:root {
+  --accent-rgb: 189 114 117;
+  --paper-rgb: 251 245 239;
+  --surface-rgb: 255 253 250;
+  --line-rgb: 232 217 208;
+  --ink-rgb: 56 42 42;
+  --shadow-rgb: 75 47 39;
+  --auth-shadow-rgb: 30 20 20;
+  --light-rgb: 240 215 212;
+  --section: #f7eee8;
+  --hover-surface: #fff7f4;
+  --soft-accent: #fbf3ef;
+  --counter-surface: #f7e8e8;
+  --decor: #e8c9c4;
+  --book-border: #d6c1af;
+  --book-paper: #f7ecda;
+  --book-photo: #e8d5bc;
+  --book-page: #fffaf0;
+  --book-ink: #66564d;
+  --book-shadow-rgb: 81 54 37;
+  --book-line-rgb: 150 112 77;
+  --book-inset-rgb: 53 35 25;
+  --dialog-mid: #fff4f1;
+  --dialog-end: #f9ebe5;
+  --stage-start: #49383b;
+  --stage-end: #261f24;
+  --highlight: #ffe8c8;
+  --highlight-rgb: 255 232 200;
+  --photo-glow-rgb: 255 214 190;
+  --stage-text: #fff8f4;
+  --stage-heart: #ffd9df;
+  --stage-muted: #e5d7d2;
+  --backdrop-rgb: 41 29 28;
+  --arrow-rgb: 36 29 27;
+  --caption: #766763;
+  --close-hover: #fff0ed;
+  --album-box-border: #e4d1c5;
+  --album-box-end: #f8ece5;
+  --closing-text: #f2d8d5;
+  --wheel-1: #f0d7d4;
+  --wheel-2: #f3e8df;
+  --wheel-3: #e7c4c1;
+  --wheel-4: #fbf5ef;
+  --wheel-5: #dfb2b0;
+  --wheel-6: #f7eee8;
+}
+
+:root[data-theme="sage"] {
+  --paper: #f5f7f1; --paper-deep: #e8eee1; --white: #fcfdf9;
+  --ink: #29382e; --muted: #657366; --line: #d4dfce;
+  --rose: #63846b; --rose-dark: #3d6148; --rose-light: #dbe8d5;
+  --accent-rgb: 99 132 107; --paper-rgb: 245 247 241; --surface-rgb: 252 253 249;
+  --line-rgb: 212 223 206; --ink-rgb: 41 56 46; --shadow-rgb: 40 61 43;
+  --light-rgb: 219 232 213; --stage-start: #354c3e; --stage-end: #1d2c24;
+}
+:root[data-theme="lavender"] {
+  --paper: #f8f5fc; --paper-deep: #eee7f6; --white: #fefcff;
+  --ink: #362c43; --muted: #75677f; --line: #e0d5ec;
+  --rose: #8b70a5; --rose-dark: #654b81; --rose-light: #e7daf3;
+  --accent-rgb: 139 112 165; --paper-rgb: 248 245 252; --surface-rgb: 254 252 255;
+  --line-rgb: 224 213 236; --ink-rgb: 54 44 67; --shadow-rgb: 58 41 77;
+  --light-rgb: 231 218 243; --stage-start: #493b59; --stage-end: #292133;
+}
+:root[data-theme="ocean"] {
+  --paper: #f2f8fb; --paper-deep: #e1eef5; --white: #fbfdff;
+  --ink: #283e4b; --muted: #627886; --line: #ccdee9;
+  --rose: #5284a1; --rose-dark: #315e79; --rose-light: #d5e8f2;
+  --accent-rgb: 82 132 161; --paper-rgb: 242 248 251; --surface-rgb: 251 253 255;
+  --line-rgb: 204 222 233; --ink-rgb: 40 62 75; --shadow-rgb: 34 61 78;
+  --light-rgb: 213 232 242; --stage-start: #304d60; --stage-end: #1b2c38;
+}
+:root[data-theme="caramel"] {
+  --paper: #faf4eb; --paper-deep: #f0e4d2; --white: #fffdf8;
+  --ink: #443225; --muted: #806b56; --line: #e5d4bd;
+  --rose: #a57849; --rose-dark: #79512c; --rose-light: #efddc2;
+  --accent-rgb: 165 120 73; --paper-rgb: 250 244 235; --surface-rgb: 255 253 248;
+  --line-rgb: 229 212 189; --ink-rgb: 68 50 37; --shadow-rgb: 76 50 28;
+  --light-rgb: 239 221 194; --stage-start: #54402e; --stage-end: #302419;
+}
+
+:root[data-theme]:not([data-theme="rose"]) {
+  --section: var(--paper-deep); --hover-surface: var(--paper); --soft-accent: var(--rose-light);
+  --counter-surface: var(--rose-light); --decor: var(--line);
+  --book-border: var(--line); --book-paper: var(--paper); --book-photo: var(--rose-light);
+  --book-page: var(--white); --book-ink: var(--muted);
+  --book-shadow-rgb: var(--shadow-rgb); --book-line-rgb: var(--accent-rgb); --book-inset-rgb: var(--shadow-rgb);
+  --dialog-mid: var(--paper); --dialog-end: var(--paper-deep);
+  --highlight: var(--rose-light); --highlight-rgb: var(--light-rgb); --photo-glow-rgb: var(--accent-rgb);
+  --stage-text: var(--white); --stage-heart: var(--rose-light); --stage-muted: var(--line);
+  --backdrop-rgb: var(--ink-rgb); --arrow-rgb: var(--ink-rgb); --auth-shadow-rgb: var(--shadow-rgb);
+  --caption: var(--muted); --close-hover: var(--rose-light); --closing-text: var(--rose-light);
+  --album-box-border: var(--line); --album-box-end: var(--paper-deep);
+  --wheel-1: var(--rose-light); --wheel-2: var(--paper-deep); --wheel-3: var(--line);
+  --wheel-4: var(--paper); --wheel-5: var(--decor); --wheel-6: var(--white);
+}
+
+.nav-actions { display: flex; flex: 0 0 auto; align-items: center; gap: 8px; }
+.theme-picker { position: relative; }
+.theme-picker > summary {
+  display: flex; align-items: center; gap: 7px; list-style: none;
+  border: 1px solid var(--line); border-radius: 999px; padding: 8px 12px;
+  background: var(--white); color: var(--rose-dark); cursor: pointer;
+  font-size: 11px; white-space: nowrap;
+}
+.theme-picker > summary::-webkit-details-marker { display: none; }
+.theme-picker > summary:hover, .theme-picker[open] > summary { border-color: var(--rose); }
+.theme-current-swatch { width: 12px; height: 12px; border-radius: 50%; background: var(--rose); }
+.theme-options {
+  position: absolute; z-index: 20; top: calc(100% + 10px); right: 0;
+  display: grid; gap: 5px; width: min(220px, calc(100vw - 34px)); margin: 0;
+  border: 1px solid var(--line); border-radius: 12px; padding: 10px;
+  background: var(--white); box-shadow: 0 12px 36px rgb(var(--shadow-rgb) / 16%);
+}
+.theme-options label { display: flex; align-items: center; gap: 9px; border-radius: 7px; padding: 9px 8px; cursor: pointer; font-size: 13px; }
+.theme-options label:hover, .theme-options label:focus-within { background: var(--paper-deep); }
+.theme-options input { margin: 0; accent-color: var(--rose-dark); }
+.theme-swatch { flex: 0 0 auto; width: 25px; height: 18px; border: 1px solid rgb(0 0 0 / 10%); border-radius: 5px; }
+.theme-swatch-rose { background: linear-gradient(90deg, #fbf5ef 50%, #bd7275 50%); }
+.theme-swatch-sage { background: linear-gradient(90deg, #f5f7f1 50%, #63846b 50%); }
+.theme-swatch-lavender { background: linear-gradient(90deg, #f8f5fc 50%, #8b70a5 50%); }
+.theme-swatch-ocean { background: linear-gradient(90deg, #f2f8fb 50%, #5284a1 50%); }
+.theme-swatch-caramel { background: linear-gradient(90deg, #faf4eb 50%, #a57849 50%); }
+
+@media (max-width: 760px) {
+  .nav { flex-wrap: wrap; gap: 8px; padding-block: 8px; }
+  .nav-actions { margin-left: auto; }
+  .theme-picker { position: static; }
+  .theme-options { top: calc(100% + 8px); right: 17px; }
+}
